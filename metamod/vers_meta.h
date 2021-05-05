@@ -42,14 +42,14 @@
 #endif /* not OPT_TYPE */
 
 
-#define VDATE 			"2018/02/11"
-#define VPATCH_COPYRIGHT_YEAR   "2018"
+#define VDATE 			"2021/05/05"
+#define VPATCH_COPYRIGHT_YEAR   "2021"
 #define VMETA_VERSION		"1.21"
 
 #define VPATCH_NAME		"Metamod-P (mm-p)"
-#define VPATCH_IVERSION		38
-#define VPATCH_VERSION		"38"
-#define VPATCH_AUTHOR		"Jussi Kivilinna"
+#define VPATCH_IVERSION		39
+#define VPATCH_VERSION		"39"
+#define VPATCH_AUTHOR		"BlackPhrase"
 #define VPATCH_WEBSITE		"http://metamod-p.sourceforge.net/"
 
 #define VVERSION		VMETA_VERSION "p" VPATCH_VERSION
