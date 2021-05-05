@@ -35,8 +35,7 @@
  *
  */
 
-#ifndef DLLAPI_POST_H
-#define DLLAPI_POST_H
+#pragma once
 
 #include <sdk_util.h>		// BOOL
 #include <osdep.h>
@@ -108,6 +107,3 @@ void CvarValue_Post(const edict_t *pEdict, const char *szValue);
 
 // Added 2005-11-22 (no SDK update)
 void CvarValue2_Post(const edict_t *pEdict, int requestID, const char *cvarName, const char *value);
-
-
-#endif /* DLLAPI_H */

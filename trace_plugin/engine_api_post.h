@@ -35,8 +35,7 @@
  *
  */
 
-#ifndef ENGINE_API_POST_H
-#define ENGINE_API_POST_H
+#pragma once
 
 extern enginefuncs_t meta_engfuncs_post;
 
@@ -272,5 +271,3 @@ extern void QueryClientCvarValue2_Post(const edict_t *pEdict, const char *cvar, 
 
 // Added 2009-06-17 (no SDK update):
 extern int EngCheckParm_Post(const char *pchCmdLineToken, char **pchNextVal);
-
-#endif /* ENGINE_API_POST_H */

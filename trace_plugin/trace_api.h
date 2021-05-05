@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef TRACE_API_H
-#define TRACE_API_H
+#pragma once
 
 #include <time.h>				// time()
 
@@ -98,5 +97,3 @@ void cmd_trace_show(void);
 void cmd_trace_list(void);
 
 TRACE_RESULT trace_setflag(const char **pfn_string, mBOOL flagval, const char **api);
-
-#endif /* TRACE_API_H */

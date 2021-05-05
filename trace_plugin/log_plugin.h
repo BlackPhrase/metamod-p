@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef LOG_PLUGIN_H
-#define LOG_PLUGIN_H
+#pragma once
 
 #include <enginecallback.h>		// ALERT()
 #include <sdk_util.h>			// UTIL_VarArgs()
@@ -55,5 +54,3 @@ extern cvar_t init_plugin_debug;
 extern cvar_t *plugin_debug;
 
 void log_init(const char *cvarname);
-
-#endif /* LOG_PLUGIN_H */

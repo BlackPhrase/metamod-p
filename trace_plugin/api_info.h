@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef API_INFO_H
-#define API_INFO_H
+#pragma once
 
 #include "comp_dep.h"
 #include "types_meta.h"			// mBOOL
@@ -308,5 +307,3 @@ typedef struct engine_info_s {
 extern dllapi_info_t dllapi_info DLLHIDDEN;
 extern newapi_info_t newapi_info DLLHIDDEN;
 extern engine_info_t engine_info DLLHIDDEN;
-
-#endif /* API_INFO_H */

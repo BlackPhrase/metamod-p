@@ -34,11 +34,8 @@
  *
  */
 
-#ifndef PLUGIN_H
-#define PLUGIN_H
+#pragma once
 
 int plugin_query(void);
 int plugin_attach(void);
 int plugin_detach(void);
-
-#endif /* PLUGIN_H */

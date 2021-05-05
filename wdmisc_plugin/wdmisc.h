@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef WDMISC_H
-#define WDMISC_H
+#pragma once
 
 void do_my_getengfuncs(void);
 
@@ -47,5 +46,3 @@ void wd_AlertMessage(ALERT_TYPE atype, char *szFmt, ...);
 void wd_msglist(void);
 void wd_msgid(void);
 void wd_testit(void);
-
-#endif /* WDMISC_H */

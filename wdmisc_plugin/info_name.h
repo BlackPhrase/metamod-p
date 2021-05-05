@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef INFO_NAME_H
-#define INFO_NAME_H
+#pragma once
 
 #include "vers_meta.h"		// VDATE, VVERSION, etc
 
@@ -50,5 +49,3 @@
 #define RC_FILENAME		"WDMISC_MM.DLL"
 #define RC_INTERNAL		"WDMISC_MM"
 #define RC_COPYRIGHT	"Copyright© 2001-2006 Will Day; licensed under the GPL"
-
-#endif /* INFO_NAME_H */

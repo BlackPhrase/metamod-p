@@ -34,12 +34,9 @@
  *
  */
 
-#ifndef DLL_PLUGIN_H
-#define DLL_PLUGIN_H
+#pragma once
 
 #include <sdk_util.h>		// BOOL
 #include <dllapi.h>			// FN_*
 
 void wd_ServerDeactivate(void);
-
-#endif /* DLL_PLUGIN_H */
