@@ -29,8 +29,7 @@
  *
  */
 
-#ifndef MM_PEXTENSIONS_H
-#define MM_PEXTENSIONS_H
+#pragma once
 
 #include "plinfo.h"		// plid_t
 #include "meta_api.h"		// PLUG_LOADTIME
@@ -112,5 +111,3 @@ C_DLLEXPORT int Meta_PExtGiveFnptrs(int interfaceVersion,
 		pextension_funcs_t *pMetaPExtFuncs);
 typedef int (*META_GIVE_PEXT_FUNCTIONS_FN) (int interfaceVersion, 
 		pextension_funcs_t *pMetaPExtFuncs);
-
-#endif /* MM_PEXTENSIONS_H */

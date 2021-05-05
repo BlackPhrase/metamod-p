@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef REG_SUPPORT_H
-#define REG_SUPPORT_H
+#pragma once
 
 #include "mreg.h"			// REG_CMD_FN, etc
 
@@ -45,5 +44,3 @@ void DLLHIDDEN meta_AddServerCommand(char *cmd_name, REG_CMD_FN function);
 void DLLHIDDEN meta_CVarRegister(cvar_t *pCvar);
 int DLLHIDDEN meta_RegUserMsg(const char *pszName, int iSize);
 void DLLHIDDEN meta_QueryClientCvarValue(const edict_t *player, const char *cvarName);
-
-#endif /* REG_SUPPORT_H */

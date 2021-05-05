@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef COMMANDS_META_H
-#define COMMANDS_META_H
+#pragma once
 
 #include "types_meta.h"			// mBOOL
 #include "comp_dep.h"
@@ -79,5 +78,3 @@ void DLLINTERNAL client_meta_usage(edict_t *pEntity);
 void DLLINTERNAL client_meta_version(edict_t *pEntity);
 void DLLINTERNAL client_meta_pluginlist(edict_t *pEntity);
 void DLLINTERNAL client_meta_aybabtu(edict_t *pEntity);
-
-#endif /* COMMANDS_META_H */

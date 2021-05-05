@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef INFO_NAME_H
-#define INFO_NAME_H
+#pragma once
 
 #include "vers_meta.h"		// VDATE, VVERSION, etc
 
@@ -52,5 +51,3 @@
 #define RC_INTERNAL		"METAMOD-P"
 #define RC_COPYRIGHT		"Copyright© 2001-" COPYRIGHT_YEAR  " Will Day; 2004-" VPATCH_COPYRIGHT_YEAR " Jussi Kivilinna; GPL licensed"
 #define RC_LICENSE		"Licensed under the GNU General Public License"
-
-#endif /* INFO_NAME_H */

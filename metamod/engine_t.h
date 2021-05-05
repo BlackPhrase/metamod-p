@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MM_ENGINE_T_H
-#define MM_ENGINE_T_H
+#pragma once
 
 #include "eiface.h"             // engfuncs_t, globalvars_t
 #include "engineinfo.h"         // EngineInfo
@@ -77,6 +76,3 @@ inline engine_t& engine_t::operator=(const engine_t& _rhs)
 
 
 extern engine_t Engine DLLHIDDEN;
-
-#endif /* MM_ENGINE_T_H */
-

@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef LINK_ENT_H
-#define LINK_ENT_H
+#pragma once
 
 #include <extdll.h>		// always
 
@@ -105,5 +104,3 @@ typedef void (*ENTITY_FN) (entvars_t *);
 		META_DEBUG(8, ("Linking plugin entity '%s'", entStr)); \
 		(*pfnEntity)(pev); \
 	}
-
-#endif /* LINK_ENT_H */

@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef DLLAPI_H
-#define DLLAPI_H
+#pragma once
 
 #include "sdk_util.h"	// BOOL
 #include "osdep.h"		// DLLEXPORT, etc
@@ -117,5 +116,3 @@ typedef int (*FN_SHOULDCOLLIDE) (edict_t *pentTouched, edict_t *pentOther);
 typedef void (*FN_CVARVALUE)(const edict_t *pEnt, const char *value);
 // Added 2005/11/21 (no SDK update):
 typedef void (*FN_CVARVALUE2)(const edict_t *pEnt, int requestID, const char *cvarName, const char *value);
-
-#endif /* DLLAPI_H */

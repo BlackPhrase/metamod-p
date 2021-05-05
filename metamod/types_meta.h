@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef TYPES_META_H
-#define TYPES_META_H
+#pragma once
 
 #include "comp_dep.h"
 
@@ -81,5 +80,3 @@ extern META_ERRNO meta_errno DLLHIDDEN;
 
 #define RETURN_LOGERR_ERRNO(errargs, retval, errval) \
 	do { META_ERROR errargs ; meta_errno=errval; return(retval); } while(0)
-
-#endif /* TYPES_META_H */

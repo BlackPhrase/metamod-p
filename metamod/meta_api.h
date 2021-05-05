@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef META_API_H
-#define META_API_H
+#pragma once
 
 #include "comp_dep.h"
 #include "dllapi.h"				// GETENTITYAPI_FN, etc
@@ -228,5 +227,3 @@ C_DLLEXPORT int GetEngineFunctions_Post(enginefuncs_t *pengfuncsFromEngine,
 #define MNEW_GameShutdown				MNEW_FUNC->pfnGameShutdown
 #define MNEW_ShouldCollide				MNEW_FUNC->pfnShouldCollide
 #define MNEW_CvarValue                                  MNEW_FUNC->pfnCvarValue
-
-#endif /* META_API_H */

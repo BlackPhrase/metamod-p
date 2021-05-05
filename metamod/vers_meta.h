@@ -35,8 +35,7 @@
  *
  */
 
-#ifndef VERS_META_H
-#define VERS_META_H
+#pragma once
 
 #ifndef OPT_TYPE
 	#define OPT_TYPE	"default"
@@ -55,7 +54,3 @@
 
 #define VVERSION		VMETA_VERSION "p" VPATCH_VERSION
 #define RC_VERS_DWORD		1,21,0,VPATCH_IVERSION	// Version Windows DLL Resources in res_meta.rc
-
-
-
-#endif /* VERS_META_H */

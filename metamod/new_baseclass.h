@@ -28,8 +28,8 @@
  *    version.
  *
  */
-#ifndef METAMOD_NEW_BASECLASS_H
-#define METAMOD_NEW_BASECLASS_H
+
+#pragma once
 
 #include <malloc.h>
 
@@ -65,5 +65,3 @@ public:
 			free(ptr); 
 	}
 };
-
-#endif /*METAMOD_NEW_BASECLASS_H*/

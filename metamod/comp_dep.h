@@ -29,8 +29,7 @@
  *
  */
  
-#ifndef COMP_DEP_H
-#define COMP_DEP_H
+#pragma once
 
 #define DECLSPEC(kw)
 #if defined (_WIN32) && defined (_MSC_VER)
@@ -93,5 +92,3 @@
 	#define likely(x) __builtin_expect((long int)(x), true)
 	#define unlikely(x) __builtin_expect((long int)(x), false)
 #endif
-
-#endif /*COMP_DEP_H*/

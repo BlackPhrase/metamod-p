@@ -28,8 +28,8 @@
  *    version.
  *
  */
-#ifndef API_HOOK_H
-#define API_HOOK_H
+
+#pragma once
 
 #include "ret_type.h"
 #include "api_info.h"
@@ -393,5 +393,3 @@ EXTERN_API_CALLER_FUNCTION(void, pip);
 EXTERN_API_CALLER_FUNCTION(ptr, pip);
 EXTERN_API_CALLER_FUNCTION(void, pip2f2i);
 EXTERN_API_CALLER_FUNCTION(void, pip2f4i2p);
-
-#endif /*API_HOOK_H*/

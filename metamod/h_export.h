@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef H_EXPORT_H
-#define H_EXPORT_H
+#pragma once
 
 #include "osdep.h"			// DLLEXPORT, WINAPI, etc
 
@@ -45,5 +44,3 @@ typedef void (WINAPI *GIVE_ENGINE_FUNCTIONS_FN) (enginefuncs_t
 
 C_DLLEXPORT void WINAPI GiveFnptrsToDll(enginefuncs_t *pengfuncsFromEngine, 
 		globalvars_t *pGlobals);
-
-#endif /* H_EXPORT_H */

@@ -6,8 +6,7 @@
 //                text segment range
 //
 
-#ifndef MM_ENGINEINFO_H
-#define MM_ENGINEINFO_H
+#pragma once
 
 
 
@@ -258,6 +257,3 @@ inline bool EngineInfo::is_valid_code_pointer( int (*_fp) (const char*, char**) 
 {
     	return is_valid_code_pointer( (void*)_fp );
 }
-
-#endif /* MM_ENGINEINFO_H */
-

@@ -28,8 +28,8 @@
  *    version.
  *
  */
-#ifndef RET_TYPE_H
-#define RET_TYPE_H
+
+#pragma once
 
 #include "new_baseclass.h"
 
@@ -65,5 +65,3 @@ private:
 		unsigned long ui;
 	} data;
 };
-
-#endif /*RET_TYPE_H*/

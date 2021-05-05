@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef OSDEP_H
-#define OSDEP_H
+#pragma once
 
 #include <string.h>			// strerror()
 #include <ctype.h>			// isupper, tolower
@@ -302,6 +301,3 @@ inline const char * DLLINTERNAL str_os_error(void) {
 	return(str_GetLastError());
 #endif /* _WIN32 */
 }
-
-
-#endif /* OSDEP_H */

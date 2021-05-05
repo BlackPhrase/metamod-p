@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef PLINFO_H
-#define PLINFO_H
+#pragma once
 
 #include "comp_dep.h"
 
@@ -81,5 +80,3 @@ extern plugin_info_t Plugin_info DLLHIDDEN;
 // Plugin identifier, passed to all Meta Utility Functions.
 typedef plugin_info_t* plid_t;
 #define PLID	&Plugin_info
-
-#endif /* PLINFO_H */

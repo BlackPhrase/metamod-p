@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MM_ENGINECALLBACKS_H
-#define MM_ENGINECALLBACKS_H
+#pragma once
 
 // This file is a wrapper around the SDK's enginecallback.h file. We need
 // this because we use a different type for the global object g_engfuncs,
@@ -72,7 +71,3 @@
 #define SET_SERVER_KEYVALUE	    	(*g_engfuncs.pfnSetKeyValue)
 #define QUERY_CLIENT_CVAR_VALUE	    (*g_engfuncs.pfnQueryClientCvarValue)
 #define QUERY_CLIENT_CVAR_VALUE2	(*g_engfuncs.pfnQueryClientCvarValue2)
-
-
-#endif /* MM_ENGINECALLBACKS_H */
-

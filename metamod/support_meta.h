@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef SUPPORT_META_H
-#define SUPPORT_META_H
+#pragma once
 
 #include <string.h>		// strcpy(), strncat()
 #include <sys/types.h>	// stat
@@ -172,6 +171,3 @@ char * DLLINTERNAL full_gamedir_path(const char *path, char *fullpath);
 
 // Greatest of two
 #define MAX(x, y) (((x)>(y))?(x):(y))
-
-
-#endif /* SUPPORT_META_H */

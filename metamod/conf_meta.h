@@ -36,8 +36,7 @@
  *
  */
 
-#ifndef CONF_META_H
-#define CONF_META_H
+#pragma once
 
 #include "types_meta.h"		// mBOOL
 #include "new_baseclass.h"
@@ -96,5 +95,3 @@ class MConfig : public class_metamod_new {
 		mBOOL DLLINTERNAL set(const char *key, const char *value);
 		void DLLINTERNAL show(void);
 };
-
-#endif /* CONF_META_H */

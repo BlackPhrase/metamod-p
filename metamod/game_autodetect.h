@@ -34,10 +34,8 @@
  *
  */
 
-#ifndef GAME_AUTODETECT_H
-#define GAME_AUTODETECT_H
+#pragma once
 
 #include "metamod.h"
-const char * DLLINTERNAL autodetect_gamedll(const gamedll_t *gamedll, const char *knownfn);
 
-#endif /*GAME_AUTODETECT_H*/
+const char * DLLINTERNAL autodetect_gamedll(const gamedll_t *gamedll, const char *knownfn);

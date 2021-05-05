@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef LOG_META_H
-#define LOG_META_H
+#pragma once
 
 #include "comp_dep.h"
 #include "osdep.h"	//unlikely, OPEN_ARGS
@@ -112,5 +111,3 @@ void DLLINTERNAL META_CLIENT(edict_t *pEntity, const char *fmt, ...);
 #endif
 
 void DLLINTERNAL flush_ALERT_buffer(void);
-
-#endif /* LOG_META_H */

@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MUTIL_H
-#define MUTIL_H
+#pragma once
 
 #include "comp_dep.h"
 #include "plinfo.h"		// plugin_info_t, etc
@@ -104,5 +103,3 @@ extern mutil_funcs_t MetaUtilFunctions DLLHIDDEN;
 #define IS_QUERYING_CLIENT_CVAR (*gpMetaUtilFuncs->pfnIsQueryingClientCvar)
 #define MAKE_REQUESTID		(*gpMetaUtilFuncs->pfnMakeRequestID)
 #define GET_HOOK_TABLES         (*gpMetaUtilFuncs->pfnGetHookTables)
-
-#endif /* MUTIL_H */

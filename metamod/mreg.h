@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MREG_H
-#define MREG_H
+#pragma once
 
 #include "types_meta.h"		// mBOOL
 #include "comp_dep.h"		//
@@ -187,5 +186,3 @@ class MRegMsgList : public class_metamod_new {
 		MRegMsg * DLLINTERNAL find(int findmsgid);
 		void DLLINTERNAL show(void);						// list all msgs to console
 };
-
-#endif /* MREG_H */

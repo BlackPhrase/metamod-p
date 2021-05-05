@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef METAMOD_H
-#define METAMOD_H
+#pragma once
 
 #include "comp_dep.h"
 #include "meta_api.h"			// META_RES, etc
@@ -252,5 +251,3 @@ inline unsigned long long DLLINTERNAL GET_TSC(void) {
 // ===== end ==================================================================
 
 #endif /*META_PERFMON*/
-
-#endif /* METAMOD_H */

@@ -29,8 +29,7 @@
  *
  */
 
-#ifndef OSDEP_P_H
-#define OSDEP_P_H
+#pragma once
 
 #include "types_meta.h"		// mBOOL
 #include "osdep.h"		// PATH_MAX
@@ -72,5 +71,3 @@ DLHANDLE DLLINTERNAL get_module_handle_of_memptr(void * memptr);
 #ifdef linux
 	void * DLLINTERNAL get_dlsym_pointer(void);
 #endif
-
-#endif /* OSDEP_P_H */

@@ -37,8 +37,7 @@
 // Wrap util.h from SDK with ifndef/endif, to avoid problems from multiple
 // inclusions.  Dunno why Valve didn't do that in util.h themselves..
 
-#ifndef SDK_UTIL_H
-#define SDK_UTIL_H
+#pragma once
 
 // We're not including the DBG_EntOfVars and DBG_AssertFunction routines
 // mentioned in the SDK util.h, so we're going to unset DEBUG here so that
@@ -117,5 +116,3 @@ const char * DLLINTERNAL META_UTIL_VarArgs(const char *format, ...);
 
 short DLLINTERNAL FixedSigned16(float value, float scale);
 unsigned short DLLINTERNAL FixedUnsigned16(float value, float scale);
-
-#endif /* SDK_UTIL_H */

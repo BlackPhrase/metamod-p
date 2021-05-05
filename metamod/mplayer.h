@@ -35,8 +35,7 @@
  *
  */
 
-#ifndef INCLUDE_METAMOD_PLAYER_H
-#define INCLUDE_METAMOD_PLAYER_H
+#pragma once
 
 #include "plinfo.h"	   // plugin_info_t, etc
 #include "mutil.h"         // query_callback_t
@@ -86,6 +85,3 @@ public:
 	void        DLLINTERNAL clear_all_cvar_queries(void);
 	const char *DLLINTERNAL is_querying_cvar(const edict_t *pEntity);
 };
-
-
-#endif /* INCLUDE_METAMOD_PLAYER_H */ 

@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MPLUGIN_H
-#define MPLUGIN_H
+#pragma once
 
 #include <time.h>			// time_t, etc
 #include <malloc.h>			// malloc, etc
@@ -230,5 +229,3 @@ class MPlugin : public class_metamod_new {
 
 #define SHOW_DEF_ENGINE(api_table, pre_str, post_str) \
 	SHOW_DEF_API(engine_info, api_table, pre_str, post_str)
-
-#endif /* MPLUGIN_H */

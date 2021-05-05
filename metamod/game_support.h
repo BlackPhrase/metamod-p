@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef GAME_SUPPORT_H
-#define GAME_SUPPORT_H
+#pragma once
 
 #include "types_meta.h"		// mBOOL
 #include "metamod.h"		// gamedll_t
@@ -52,5 +51,3 @@ typedef game_modinfo_t game_modlist_t[];
 
 const DLLINTERNAL game_modinfo_t *lookup_game(const char *name);
 mBOOL DLLINTERNAL setup_gamedll(gamedll_t *gamedll);
-
-#endif /* GAME_SUPPORT_H */

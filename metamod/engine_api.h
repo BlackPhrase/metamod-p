@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef ENGINE_API_H
-#define ENGINE_API_H
+#pragma once
 
 #include "comp_dep.h"
 
@@ -236,5 +235,3 @@ typedef void (*FN_QUERYCLIENTCVARVALUE) ( const edict_t *player, const char *cva
 typedef void (*FN_QUERYCLIENTCVARVALUE2) ( const edict_t *player, const char *cvarName, int requestID );
 // Added 2009/06/17 (no SDK update):
 typedef void (*FN_ENGCHECKPARM) ( const char *pchCmdLineToken, char **pchNextVal );
-
-#endif /* ENGINE_API_H */

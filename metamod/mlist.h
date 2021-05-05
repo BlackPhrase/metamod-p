@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MLIST_H
-#define MLIST_H
+#pragma once
 
 #include "types_meta.h"			// mBOOL
 #include "mplugin.h"			// class MPlugin
@@ -90,5 +89,3 @@ class MPluginList : public class_metamod_new {
 		void DLLINTERNAL show(void) { show(-1); };		// list plugins to console
 		void DLLINTERNAL show_client(edict_t *pEntity);		// list plugins to player client
 };
-
-#endif /* MLIST_H */
