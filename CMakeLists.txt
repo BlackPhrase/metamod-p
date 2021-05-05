@@ -9,6 +9,10 @@ include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/metamod
 )
 
+# Remove prefixes from shared libs
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
+set(CMAKE_SHARED_MODULE_PREFIX "")
+
 # main module
 add_subdirectory(metamod)
 
