@@ -491,7 +491,8 @@ meta_enginefuncs_t::meta_enginefuncs_t(
 	pfnQueryClientCvarValue2 = _pfnQueryClientCvarValue2;
 	pfnCheckParm = _pfnEngCheckParm;
 
-	memset( extra_functions, 0, sizeof(extra_functions));
+	// TODO
+	//memset( extra_functions, 0, sizeof(extra_functions));
 
 	memset( dummies, 0, sizeof(pdummyfunc) * c_NumDummies ); 
 }
