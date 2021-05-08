@@ -124,7 +124,7 @@ typedef void (*FN_ENGINEFPRINTF) (FILE *pfile, char *szFmt, ...);
 typedef void * (*FN_PVALLOCENTPRIVATEDATA) (edict_t *pEdict, long cb);
 #else
 typedef void (*FN_ENGINEFPRINTF) (void *pfile, char *szFmt, ...);
-typedef void * (*FN_PVALLOCENTPRIVATEDATA) (edict_t *pEdict, int32 cb);
+typedef void * (*FN_PVALLOCENTPRIVATEDATA) (edict_t *pEdict, int32_t cb);
 #endif
 typedef void * (*FN_PVENTPRIVATEDATA) (edict_t *pEdict);
 typedef void (*FN_FREEENTPRIVATEDATA) (edict_t *pEdict);
@@ -144,8 +144,8 @@ typedef void (*FN_GETBONEPOSITION) (const edict_t *pEdict, int iBone, float *rgf
 typedef unsigned long (*FN_FUNCTIONFROMNAME) ( const char *pName );
 typedef const char * (*FN_NAMEFORFUNCTION) ( unsigned long function );
 #else
-typedef uint32 (*FN_FUNCTIONFROMNAME) ( const char *pName );
-typedef const char * (*FN_NAMEFORFUNCTION) ( uint32 function );
+typedef uint32_t (*FN_FUNCTIONFROMNAME) ( const char *pName );
+typedef const char * (*FN_NAMEFORFUNCTION) ( uint32_t function );
 #endif
 typedef void (*FN_CLIENTPRINTF) ( edict_t *pEdict, PRINT_TYPE ptype, const char *szMsg );
 typedef void (*FN_SERVERPRINT) ( const char *szMsg );
@@ -160,7 +160,7 @@ typedef CRC32_t (*FN_CRC32_FINAL) (CRC32_t pulCRC);
 #ifdef HLSDK_3_2_OLD_EIFACE
 typedef long (*FN_RANDOMLONG) (long lLow, long lHigh);
 #else
-typedef int32 (*FN_RANDOMLONG) (int32 lLow, int32 lHigh);
+typedef int32_t (*FN_RANDOMLONG) (int32_t lLow, int32_t lHigh);
 #endif
 typedef float (*FN_RANDOMFLOAT) (float flLow, float flHigh);
 typedef void (*FN_SETVIEW) (const edict_t *pClient, const edict_t *pViewent );
@@ -181,7 +181,7 @@ typedef char * (*FN_GETINFOKEYBUFFER) (edict_t *e);
 typedef char * (*FN_INFOKEYVALUE) (char *infobuffer, char *key);
 typedef void (*FN_SETKEYVALUE) (char *infobuffer, char *key, char *value);
 typedef void (*FN_SETCLIENTKEYVALUE) (int clientIndex, char *infobuffer, char *key, char *value);
-typedef int (*FN_ISMAPVALID) (char *filename);
+typedef int (*FN_ISMAPVALID) (const char *filename);
 typedef void (*FN_STATICDECAL) ( const float *origin, int decalIndex, int entityIndex, int modelIndex );
 typedef int (*FN_PRECACHEGENERIC) (char *s);
 typedef int (*FN_GETPLAYERUSERID) (edict_t *e );
@@ -211,7 +211,7 @@ typedef int (*FN_CREATEINSTANCEDBASELINE) ( int classname, struct entity_state_s
 typedef void (*FN_CVAR_DIRECTSET) ( struct cvar_s *var, char *value );
 typedef void (*FN_FORCEUNMODIFIED) ( FORCE_TYPE type, float *mins, float *maxs, const char *filename );
 typedef void (*FN_GETPLAYERSTATS) ( const edict_t *pClient, int *ping, int *packet_loss );
-typedef void (*FN_ADDSERVERCOMMAND) ( char *cmd_name, void (*function) (void) );
+typedef void (*FN_ADDSERVERCOMMAND) ( const char *cmd_name, void (*function) (void) );
 // Added in SDK 2.2:
 typedef qboolean (*FN_VOICE_GETCLIENTLISTENING) (int iReceiver, int iSender);
 typedef qboolean (*FN_VOICE_SETCLIENTLISTENING) (int iReceiver, int iSender, qboolean bListen);
@@ -220,7 +220,7 @@ typedef const char * (*FN_GETPLAYERAUTHID) (edict_t *e);
 // Added 2003/11/10 (no SDK update):
 typedef sequenceEntry_s * (*FN_SEQUENCEGET) (const char* fileName, const char* entryName);
 typedef sentenceEntry_s * (*FN_SEQUENCEPICKSENTENCE) (const char* groupName, int pickMethod, int *picked);
-typedef int (*FN_GETFILESIZE) (char *filename);
+typedef int (*FN_GETFILESIZE) (const char *filename);
 typedef unsigned int (*FN_GETAPPROXWAVEPLAYLEN) (const char *filepath);
 typedef int (*FN_ISCAREERMATCH) (void);
 typedef int (*FN_GETLOCALIZEDSTRINGLENGTH) (const char *label);

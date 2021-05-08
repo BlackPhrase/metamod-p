@@ -120,11 +120,11 @@
 	CLEAN_FORMATED_STRING()
 
 
-static int mm_PrecacheModel(char *s) {
+static int mm_PrecacheModel(const char *s) {
 	META_ENGINE_HANDLE(int, 0, FN_PRECACHEMODEL, pfnPrecacheModel, p, (s));
 	RETURN_API(int)
 }
-static int mm_PrecacheSound(char *s) {
+static int mm_PrecacheSound(const char *s) {
 	META_ENGINE_HANDLE(int, 0, FN_PRECACHESOUND, pfnPrecacheSound, p, (s));
 	RETURN_API(int)
 }
@@ -145,7 +145,7 @@ static void mm_SetSize(edict_t *e, const float *rgflMin, const float *rgflMax) {
 	META_ENGINE_HANDLE_void(FN_SETSIZE, pfnSetSize, 3p, (e, rgflMin, rgflMax));
 	RETURN_API_void()
 }
-static void mm_ChangeLevel(char *s1, char *s2) {
+static void mm_ChangeLevel(const char *s1, const char *s2) {
 	META_ENGINE_HANDLE_void(FN_CHANGELEVEL, pfnChangeLevel, 2p, (s1, s2));
 	RETURN_API_void()
 }
@@ -286,7 +286,7 @@ static void mm_GetAimVector(edict_t *ent, float speed, float *rgflReturn) {
 	RETURN_API_void()
 }
 
-static void mm_ServerCommand(char *str) {
+static void mm_ServerCommand(const char *str) {
 	META_ENGINE_HANDLE_void(FN_SERVERCOMMAND, pfnServerCommand, p, (str));
 	RETURN_API_void()
 }
@@ -294,7 +294,7 @@ static void mm_ServerExecute(void) {
 	META_ENGINE_HANDLE_void(FN_SERVEREXECUTE, pfnServerExecute, void, (VOID_ARG));
 	RETURN_API_void()
 }
-static void mm_engClientCommand(edict_t *pEdict, char *szFmt, ...) {
+static void mm_engClientCommand(edict_t *pEdict, const char *szFmt, ...) {
 	META_ENGINE_HANDLE_void_varargs(FN_CLIENTCOMMAND_ENG, pfnClientCommand, 2pV, pEdict, szFmt);
 	RETURN_API_void()
 }
@@ -303,7 +303,7 @@ static void mm_ParticleEffect(const float *org, const float *dir, float color, f
 	META_ENGINE_HANDLE_void(FN_PARTICLEEFFECT, pfnParticleEffect, 2p2f, (org, dir, color, count));
 	RETURN_API_void()
 }
-static void mm_LightStyle(int style, char *val) {
+static void mm_LightStyle(int style, const char *val) {
 	META_ENGINE_HANDLE_void(FN_LIGHTSTYLE, pfnLightStyle, ip, (style, val));
 	RETURN_API_void()
 }
@@ -385,14 +385,14 @@ static void mm_CVarSetString(const char *szVarName, const char *szValue) {
 	RETURN_API_void()
 }
 
-static void mm_AlertMessage(ALERT_TYPE atype, char *szFmt, ...) {
+static void mm_AlertMessage(ALERT_TYPE atype, const char *szFmt, ...) {
 	META_ENGINE_HANDLE_void_varargs(FN_ALERTMESSAGE, pfnAlertMessage, ipV, atype, szFmt);
 	RETURN_API_void()
 }
 #ifdef HLSDK_3_2_OLD_EIFACE
-static void mm_EngineFprintf(FILE *pfile, char *szFmt, ...) {
+static void mm_EngineFprintf(FILE *pfile, const char *szFmt, ...) {
 #else
-static void mm_EngineFprintf(void *pfile, char *szFmt, ...) {
+static void mm_EngineFprintf(void *pfile, const char *szFmt, ...) {
 #endif
 	META_ENGINE_HANDLE_void_varargs(FN_ENGINEFPRINTF, pfnEngineFprintf, 2pV, pfile, szFmt);
 	RETURN_API_void()
@@ -401,7 +401,7 @@ static void mm_EngineFprintf(void *pfile, char *szFmt, ...) {
 #ifdef HLSDK_3_2_OLD_EIFACE
 static void *mm_PvAllocEntPrivateData(edict_t *pEdict, long cb) {
 #else
-static void *mm_PvAllocEntPrivateData(edict_t *pEdict, int32 cb) {
+static void *mm_PvAllocEntPrivateData(edict_t *pEdict, int32_t cb) {
 #endif
 	META_ENGINE_HANDLE(void *, NULL, FN_PVALLOCENTPRIVATEDATA, pfnPvAllocEntPrivateData, pi, (pEdict, cb));
 	RETURN_API(void *)
@@ -492,15 +492,15 @@ static unsigned long mm_FunctionFromName( const char *pName ) {
 	RETURN_API(unsigned long)
 }
 #else
-static uint32 mm_FunctionFromName( const char *pName ) {
-	META_ENGINE_HANDLE(uint32, 0, FN_FUNCTIONFROMNAME, pfnFunctionFromName, p, (pName));
-	RETURN_API(uint32)
+static uint32_t mm_FunctionFromName( const char *pName ) {
+	META_ENGINE_HANDLE(uint32_t, 0, FN_FUNCTIONFROMNAME, pfnFunctionFromName, p, (pName));
+	RETURN_API(uint32_t)
 }
 #endif
 #ifdef HLSDK_3_2_OLD_EIFACE
 static const char *mm_NameForFunction( unsigned long function ) {
 #else
-static const char *mm_NameForFunction( uint32 function ) {
+static const char *mm_NameForFunction( uint32_t function ) {
 #endif
 	META_ENGINE_HANDLE(const char *, NULL, FN_NAMEFORFUNCTION, pfnNameForFunction, ui, (function));
 	RETURN_API(const char *)
@@ -558,9 +558,9 @@ static long mm_RandomLong(long lLow, long lHigh) {
 	RETURN_API(long)
 }
 #else
-static int32 mm_RandomLong(int32 lLow, int32 lHigh) {
-	META_ENGINE_HANDLE(int32, 0, FN_RANDOMLONG, pfnRandomLong, 2i, (lLow, lHigh));
-	RETURN_API(int32)
+static int32_t mm_RandomLong(int32_t lLow, int32_t lHigh) {
+	META_ENGINE_HANDLE(int32_t, 0, FN_RANDOMLONG, pfnRandomLong, 2i, (lLow, lHigh));
+	RETURN_API(int32_t)
 }
 #endif
 static float mm_RandomFloat(float flLow, float flHigh) {
@@ -634,20 +634,20 @@ static char *mm_GetInfoKeyBuffer(edict_t *e) {
 	META_ENGINE_HANDLE(char *, NULL, FN_GETINFOKEYBUFFER, pfnGetInfoKeyBuffer, p, (e));
 	RETURN_API(char *)
 }
-static char *mm_InfoKeyValue(char *infobuffer, char *key) {
+static char *mm_InfoKeyValue(char *infobuffer, const char *key) {
 	META_ENGINE_HANDLE(char *, NULL, FN_INFOKEYVALUE, pfnInfoKeyValue, 2p, (infobuffer, key));
 	RETURN_API(char *)
 }
-static void mm_SetKeyValue(char *infobuffer, char *key, char *value) {
+static void mm_SetKeyValue(char *infobuffer, const char *key, const char *value) {
 	META_ENGINE_HANDLE_void(FN_SETKEYVALUE, pfnSetKeyValue, 3p, (infobuffer, key, value));
 	RETURN_API_void()
 }
-static void mm_SetClientKeyValue(int clientIndex, char *infobuffer, char *key, char *value) {
+static void mm_SetClientKeyValue(int clientIndex, char *infobuffer, const char *key, const char *value) {
 	META_ENGINE_HANDLE_void(FN_SETCLIENTKEYVALUE, pfnSetClientKeyValue, i3p, (clientIndex, infobuffer, key, value));
 	RETURN_API_void()
 }
 
-static int mm_IsMapValid(char *filename) {
+static int mm_IsMapValid(const char *filename) {
 	META_ENGINE_HANDLE(int, 0, FN_ISMAPVALID, pfnIsMapValid, p, (filename));
 	RETURN_API(int)
 }
@@ -655,7 +655,7 @@ static void mm_StaticDecal( const float *origin, int decalIndex, int entityIndex
 	META_ENGINE_HANDLE_void(FN_STATICDECAL, pfnStaticDecal, p3i, (origin, decalIndex, entityIndex, modelIndex));
 	RETURN_API_void()
 }
-static int mm_PrecacheGeneric(char *s) {
+static int mm_PrecacheGeneric(const char *s) {
 	META_ENGINE_HANDLE(int, 0, FN_PRECACHEGENERIC, pfnPrecacheGeneric, p, (s));
 	RETURN_API(int)
 }
@@ -787,7 +787,7 @@ static void mm_GetPlayerStats( const edict_t *pClient, int *ping, int *packet_lo
 	RETURN_API_void()
 }
 
-static void mm_AddServerCommand( char *cmd_name, void (*function) (void) ) {
+static void mm_AddServerCommand( const char *cmd_name, void (*function) (void) ) {
 	META_ENGINE_HANDLE_void(FN_ADDSERVERCOMMAND, pfnAddServerCommand, 2p, (cmd_name, (void*)function));
 	RETURN_API_void()
 }
@@ -824,7 +824,7 @@ static sentenceEntry_s *mm_SequencePickSentence(const char *groupName, int pickM
 	RETURN_API(sentenceEntry_s *)
 }
 
-static int mm_GetFileSize(char *filename) {
+static int mm_GetFileSize(const char *filename) {
 	META_ENGINE_HANDLE(int, 0, FN_GETFILESIZE, pfnGetFileSize, p, (filename));
 	RETURN_API(int)
 }
@@ -904,13 +904,13 @@ static int mm_EngCheckParm(const char *pchCmdLineToken, char **pchNextVal) {
 	static mBOOL s_check = mFALSE;
 
 	//Engine version didn't change when this API was added.  Check if the pointer is valid.
-	if (!s_check && g_engfuncs.pfnEngCheckParm &&
-	     !IS_VALID_PTR((void * )g_engfuncs.pfnEngCheckParm)) {
-		g_engfuncs.pfnEngCheckParm = NULL;
+	if (!s_check && g_engfuncs.pfnCheckParm &&
+	     !IS_VALID_PTR((void * )g_engfuncs.pfnCheckParm)) {
+		g_engfuncs.pfnCheckParm = NULL;
 		s_check = mTRUE;
 	}
 
-	META_ENGINE_HANDLE(int, 0, FN_ENGCHECKPARM, pfnEngCheckParm, 2p, (pchCmdLineToken, pchNextVal));
+	META_ENGINE_HANDLE(int, 0, FN_ENGCHECKPARM, pfnCheckParm, 2p, (pchCmdLineToken, pchNextVal));
 	RETURN_API(int)
 }
 
